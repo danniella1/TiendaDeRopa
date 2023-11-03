@@ -1,23 +1,23 @@
+let currentSlide = 0;
+const slides = document.querySelectorAll('.diapositiva');
 
-function moverSlide(direccion) {
-    const slides = document.querySelectorAll('.slide');
-    let currentIndex = 0;
-
-    slides.forEach((slide, i) => {
-        if (slide.style.transform === 'translateX(0%)') {
-            currentIndex = i;
-        }
-    });
-
-    let newIndex = currentIndex + direccion;
-
-    if (newIndex < 0) {
-        newIndex = slides.length - 1;
-    } else if (newIndex >= slides.length) {
-        newIndex = 0;
-    }
-
-    slides.forEach((slide, i) => {
-        slide.style.transform = `translateX(${(i - newIndex) * 100}%)`;
-    });
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.style.transform = `translateX(${100 * (i - index)}%)`;
+  });
+  currentSlide = index;
 }
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+// Establece un intervalo para cambiar automáticamente de diapositiva cada 3 segundos (3000 milisegundos)
+setInterval(nextSlide, 3000);
+
+// Opcional: Pausar el carrusel cuando el mouse pasa sobre él
+const carrusel = document.querySelector('.carrusel');
+carrusel.addEventListener('mouseenter', () => clearInterval(interval));
+carrusel.addEventListener('mouseleave', () => setInterval(nextSlide, 3000));
+
