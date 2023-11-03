@@ -1,11 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Título de la Página</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de ropa</title>
+    <link rel="stylesheet" href="style.css/stylo.css">
 </head>
 <body>
-    <h1>Encabezado Principal</h1>
-    <p>Este es un párrafo de texto.</p>
-    <a href="https://www.ejemplo.com">Enlace a Ejemplo</a>
+    <header>
+        <div class="h2">
+            <h2>Mujer</h2>
+            <h2>Niños</h2>
+        </div>
+       <div class="logo">
+            <img src="style.css/img.png/logoa.png" alt="Logo">
+       </div>
+       
+     </header>
+     
+    <main>
+        <div class="carrusel">
+            <button class="btn-izquierda" onclick="moverSlide(-1)">❮</button>
+            <div class="carrusel">
+                <div class="slide">
+                    <img src="style.css/img.png/carrusel.png" alt="Slide 1">
+                </div>
+                <div class="slide">
+                    <img src="style.css/img.png/carrusel.png" alt="Slide 2">
+                </div>
+                <div class="slide">
+                    <img src="style.css/img.png/carrusel.png" alt="Slide 3">
+                </div>
+            </div>
+            <button class="btn-derecha" onclick="moverSlide(1)">❯</button>
+            
+            <script src="script.js"></script>
+        </div>
+
+        <section class="categoria">
+            <nav>
+                <div class="fila">
+                    <button class="boton"> 
+                        <img src="style.css/img.png/chaqueta.png" alt="blusa">Chaqueta</button>
+                    <button class="boton">
+                        <img src="style.css/img.png/vestido.png" alt="vestido">Vestido</button>
+                    <button class="boton">
+                        <img src="style.css/img.png/polera.png" alt="polera">Polera</button>
+                </div>
+                <div class="fila">
+                    <button class="boton">
+                        <img src="style.css/img.png/blusa-2.png" alt="blusa">Blusa</button>
+                    <button class="boton">
+                        <img src="style.css/img.png/pantalones.png" alt="pantalones">Pantalones</button>
+                    <button class="boton">
+                        <img src="style.css/img.png/falda.png" alt="falda">Falda</button>
+                </div>
+            </nav>
+        </section>
+    </main>
+    <section class="cuerpo">
+
+
+
+    </section>
+
+    <footer>
+        <p>&copy; 2023 - Tienda de ropa</p>
+    </footer>
 </body>
 </html>

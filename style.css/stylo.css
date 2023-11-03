@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: sans-serif;
+}
+
+body, h2{
+    color: fuchsia;
+    font-family: sans-serif;
+}
+body main {
+    background-color: #D1E1F0;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: white; /* Añadí un color de fondo para visualización */ 
+}
+
+header h2 {
+    margin-left: 40px;
+    display: inline-block;
+    color: fuchsia;
+}
+
+.logo {
+    max-width: 21%;
+    margin: 0 auto; /* Centra el logo horizontalmente */
+}
+
+img {
+    max-width: 100%;
+}
+
+.carrusel {
+    display: flex;
+    overflow: hidden;
+    width: 1000px; /* Ajusta el ancho según tus necesidades */
+    margin: 0 auto;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.slide img {
+    width: 100%;
+}
+
+.carrusel .btn-izquierda {
+    margin-left: 10px;
+    color: white;
+}
+
+.carrusel .btn-derecha {
+    margin-right: 10px;
+    color: white;
+}
+
+.carrusel .btn-izquierda, .btn-derecha {
+    background-color: rgb(231, 171, 231);
+    font-size: 18px;
+}
+
+.fila {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.categoria.fila, button {
+    background-color: white;
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: fuchsia;
+}
+
+.boton {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 320px;
+}
+
+.boton img {
+    margin-right: 40px; /* Ajusta este valor según el espacio que desees entre la imagen y el texto */
+    width: 80px;
+    height: 80px;
+}
+
+footer {
+    background-color: #00639D;
+    padding: 60px;
+    text-align: center;
+    color: white;
+    
+}
